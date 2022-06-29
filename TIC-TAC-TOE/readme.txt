@@ -1,3 +1,7 @@
+This project is a fully functional Tic-Tac-Toe game where the computer player plays intelligently. Try It out and see if you can beat the computer.
+Python 3.10 is used to built this project. Enjoy
+
+
 If you want to choose the spot randomly - 
 
 available = game.available_moves()
