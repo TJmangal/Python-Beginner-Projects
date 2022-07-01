@@ -36,7 +36,7 @@
         Welcome to the text utils!! You can do a lot with your text here. 
     </div>
     <div class="container">
-        <form action="analyze", method="post"> {% csrf_token %}
+        <form action="analyze", method="post"> {% csrf_token %} <!-- To enable csrf token for csrf security -->
             <div class="mb-3">
                 <label for="exampleFormControlTextarea1" class="form-label">Enter your text below</label>
                 <textarea name="text" class="form-control" id="exampleFormControlTextarea1" rows="6"></textarea>
