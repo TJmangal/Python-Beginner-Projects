@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Employee Crud</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+  </head>
+  <body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <nav class="navbar bg-warning">
+        <div class="container-fluid">
+          <span class="navbar-brand mb-0 h1">ABC Company Ltd.</span>
+        </div>
+    </nav>
+    <div class="alert alert-success" role="alert">
+        Operation Successful!!
+    </div>
+    <div class="container">
+        <table class="table">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">Employee ID</th>
+                <th scope="col">First Name</th>
+                <th scope="col">Last Name</th>
+                <th scope="col">Designation</th>
+                <th scope="col">Salary</th>
+                <th scope="col">Date Of Joining</th>
+              </tr>
+            </thead>
+            <tbody>
+            {% for emp in Employees %}
+                <tr>
+                  <th scope="row">{{ emp.empId }}</th>
+                  <td>{{ emp.empFirstName }}</td>
+                  <td>{{ emp.empLastName }}</td>
+                  <td>{{ emp.empDesignation }}</td>
+                  <td>{{ emp.empSalary }}</td>
+                  <td>{{ emp.empDoj }}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+  </body>
+</html>
